@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DuplicateEncode.cs" />
     <Compile Include="HighestScoringWord.cs" />
     <Compile Include="JadenCase.cs" />
     <Compile Include="Program.cs" />
