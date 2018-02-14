@@ -21,5 +21,16 @@ namespace CodeWarsTests
 
             Assert.AreEqual(result, 3, "Incorrect");
         }
+
+        [TestMethod()]
+        public void TestEvenessOddTest()
+        {
+            var numbers = "1 2 2";
+            
+            var iqTest = new IQTestEvenness();
+            var result = iqTest.TestEveness(numbers);
+
+            Assert.AreEqual(result, 1, "Incorrect");
+        }
     }
 }
