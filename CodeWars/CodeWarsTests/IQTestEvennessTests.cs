@@ -16,9 +16,10 @@ namespace CodeWarsTests
         {
             var numbers = "2 4 7 8 10";
 
-            var result = 3;
+            var iqTest = new IQTestEvenness();
+            var result = iqTest.TestEveness(numbers);
 
-            Assert.AreEqual(result, 3);
+            Assert.AreEqual(result, 3, "Incorrect");
         }
     }
 }
