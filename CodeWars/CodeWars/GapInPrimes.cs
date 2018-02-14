@@ -33,7 +33,34 @@ namespace CodeWars
         */
         public long[] DoGap(int g, long m, long n)
         {
-            return new long[] {101, 103};
+            var primeNumbers = new List<long>();
+            for(var i = m; i < n; i ++)
+            {
+                if (IsPrime(i) && IsPrime(i + g))
+                {
+                    primeNumbers.Add(i);
+                    primeNumbers.Add(i+g);
+                    return new[] {i, i+g};
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        private bool IsPrime(long number)
+        {
+            int i;
+            for (i = 2; i <= number - 1; i++)
+            {
+                if (number % i == 0)
+                    return false;
+            }
+            return i == number;
         }
     }
 }

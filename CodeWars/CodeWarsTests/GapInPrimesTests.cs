@@ -21,8 +21,20 @@ namespace CodeWarsTests
             var gapInPrimes = new GapInPrimes();
             var result = gapInPrimes.DoGap(gap, initialNumber, finalNumber);
 
-            Assert.AreEqual(new long[] { 101, 103 }, result, "Incorrect");
-            
+            Assert.IsTrue(new long[] { 101, 103 }.SequenceEqual(result), "Incorrect");
+        }
+
+        [TestMethod()]
+        public void DoGapTestWithNull()
+        {
+            var gap = 6;
+            var initialNumber = 100;
+            var finalNumber = 110;
+
+            var gapInPrimes = new GapInPrimes();
+            var result = gapInPrimes.DoGap(gap, initialNumber, finalNumber);
+
+            Assert.AreEqual(null, result, "Incorrect");
         }
     }
 }
