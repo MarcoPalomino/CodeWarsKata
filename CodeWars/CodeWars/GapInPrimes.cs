@@ -34,17 +34,38 @@ namespace CodeWars
         public long[] DoGap(int g, long m, long n)
         {
             var primeNumbers = new List<long>();
-            for(var i = m; i < n; i ++)
+            var foundPrimeNumbers = new List<long>();
+
+            for (var i = m; i < n - g; i++)
             {
-                if (IsPrime(i) && IsPrime(i + g))
+                if (!foundPrimeNumbers.Contains(i) && IsPrime(i)) foundPrimeNumbers.Add(i);
+                if (!foundPrimeNumbers.Contains(i+g) && IsPrime(i + g)) foundPrimeNumbers.Add(i + g);
+
+                if ((foundPrimeNumbers.Contains(i) || IsPrime(i)) && (foundPrimeNumbers.Contains(i + g) || IsPrime(i + g)) && !PrimesBetween(i, i + g))
                 {
                     primeNumbers.Add(i);
-                    primeNumbers.Add(i+g);
-                    return new[] {i, i+g};
+                    primeNumbers.Add(i + g);
+                    return new[] { i, i + g };
                 }
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        /// <returns></returns>
+        private bool PrimesBetween(long start, long end)
+        {
+            for (var i = start + 1; i < end; i++)
+            {
+                if (IsPrime(i))
+                    return true;
+            }
+            return false;
         }
 
         /// <summary>
