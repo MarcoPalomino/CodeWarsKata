@@ -52,6 +52,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="DuplicateEncodeTests.cs" />
+    <Compile Include="GapInPrimesTests.cs" />
     <Compile Include="HighestScoringWordTests.cs" />
     <Compile Include="IQTestEvennessTests.cs" />
     <Compile Include="JadenCaseTests.cs" />
