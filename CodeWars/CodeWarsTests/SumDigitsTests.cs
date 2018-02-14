@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using CodeWars;
 
-
-namespace CodeWars.Tests
+namespace CodeWarsTests
 {
     [TestClass()]
     public class SumDigitsTests
