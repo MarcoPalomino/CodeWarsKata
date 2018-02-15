@@ -50,6 +50,7 @@
     <Compile Include="JadenCase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReversedStrings.cs" />
     <Compile Include="SubstractSum.cs" />
     <Compile Include="SumDigits.cs" />
     <Compile Include="SumMultiplesNumber.cs" />

@@ -57,6 +57,7 @@
     <Compile Include="IQTestEvennessTests.cs" />
     <Compile Include="JadenCaseTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReversedStringsTests.cs" />
     <Compile Include="SubstractSumTests.cs" />
     <Compile Include="SumDigitsTests.cs" />
     <Compile Include="SumMultiplesNumberTests.cs" />
