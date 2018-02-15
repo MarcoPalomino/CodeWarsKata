@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Linq;
 
-public class ReversedStrings
+namespace CodeWars
 {
-    public string DoReverse(string str)
+    public class ReversedStrings
     {
-        throw new NotImplementedException("TODO: Kata.Solution(string) => string");
+        public string DoReverse(string str)
+        {
+            var newString = "";
+            str.Reverse().ToList().ForEach(letter => newString += letter);
+            return newString;
+        }
     }
 }
