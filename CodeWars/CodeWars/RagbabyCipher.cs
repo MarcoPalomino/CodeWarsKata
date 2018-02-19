@@ -53,7 +53,7 @@ namespace CodeWars
                         }
 
                         var newLetter = coder.IndexOf(letter.ToString().ToLower()) + countSpaces > coder.Length - 1 
-                                    ? letter.ToString() 
+                                    ? coder[coder.IndexOf(letter.ToString().ToLower()) + countSpaces - coder.Length].ToString() //letter.ToString() 
                                     : coder[coder.IndexOf(letter.ToString().ToLower()) + countSpaces].ToString();
 
                         newText += char.IsUpper(letter) ? newLetter.ToUpper() : newLetter;
@@ -87,8 +87,8 @@ namespace CodeWars
                             break;
                         }
 
-                        var newLetter = coder.IndexOf(letter.ToString().ToLower()) - countSpaces < 1
-                            ? letter.ToString()
+                        var newLetter = coder.IndexOf(letter.ToString().ToLower()) - countSpaces < 0
+                            ? coder[coder.Length - countSpaces + coder.IndexOf(letter.ToString().ToLower())].ToString()//letter.ToString()
                             : coder[coder.IndexOf(letter.ToString().ToLower()) - countSpaces].ToString();
 
 

@@ -52,7 +52,7 @@ namespace CodeWarsTests
             //Assert.AreEqual("This.tHis.thIs.thiS...", ragbabyCipher.Decode("Urew.uRew.urEw.ureW...", "cipher"));
 
             Assert.AreEqual("This is an example.", ragbabyCipher.Encode(ragbabyCipher.Decode("This is an example.", "cipher"), "cipher"));
-            //Assert.AreEqual("This is an example.", ragbabyCipher.Decode(ragbabyCipher.Encode("This is an example.", "cipher"), "cipher"));
+            Assert.AreEqual("This is an example.", ragbabyCipher.Decode(ragbabyCipher.Encode("This is an example.", "cipher"), "cipher"));
         }
     }
 }
