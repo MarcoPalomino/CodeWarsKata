@@ -38,16 +38,17 @@ namespace CodeWarsTests
         }
 
         [TestMethod()]
-        public void LongDoGapTest()
+        public void DoGapLongTest()
         {
-            var gap = 10;
-            var initialNumber = 212695;
-            var finalNumber = 212795;
-
+            var gap = 8;
+            var initialNumber = (long)3e6;
+            var finalNumber = (long)4e6;
+            
             var gapInPrimes = new GapInPrimes();
             var result = gapInPrimes.DoGap(gap, initialNumber, finalNumber);
 
-            Assert.AreEqual(null, result, "Incorrect");
+            
+            Assert.IsTrue(new long[] { 3000953 , 3000961 }.SequenceEqual(result), "Incorrect");
         }
     }
 }

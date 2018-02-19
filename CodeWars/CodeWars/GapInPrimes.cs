@@ -33,19 +33,17 @@ namespace CodeWars
         */
         public long[] DoGap(int g, long m, long n)
         {
+            if (n < m) throw new Exception("Wrong values entered");
+            var primes = GeneratePrimes(m,n);
             var primeNumbers = new List<long>();
-            var foundPrimeNumbers = new List<long>();
 
-            for (var i = m; i < n - g; i++)
+            for (var i = 0; i < primes.Count - 1; i++)
             {
-                if (!foundPrimeNumbers.Contains(i) && IsPrime(i)) foundPrimeNumbers.Add(i);
-                if (!foundPrimeNumbers.Contains(i+g) && IsPrime(i + g)) foundPrimeNumbers.Add(i + g);
-
-                if ((foundPrimeNumbers.Contains(i) || IsPrime(i)) && (foundPrimeNumbers.Contains(i + g) || IsPrime(i + g)) && !PrimesBetween(i, i + g))
+                if (primes[i + 1] - primes[i] == g)
                 {
-                    primeNumbers.Add(i);
-                    primeNumbers.Add(i + g);
-                    return new[] { i, i + g };
+                    primeNumbers.Add(primes[i]);
+                    primeNumbers.Add(primes[i + 1]);
+                    return new[] { primes[i], primes[i + 1] };
                 }
             }
 
@@ -55,33 +53,30 @@ namespace CodeWars
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="start"></param>
-        /// <param name="end"></param>
+        /// <param name="startNumber"></param>
+        /// <param name="finalNumber"></param>
         /// <returns></returns>
-        private bool PrimesBetween(long start, long end)
+        private List<long> GeneratePrimes(long startNumber, long finalNumber)
         {
-            for (var i = start + 1; i < end; i++)
-            {
-                if (IsPrime(i))
-                    return true;
-            }
-            return false;
-        }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="number"></param>
-        /// <returns></returns>
-        private bool IsPrime(long number)
-        {
-            int i;
-            for (i = 2; i <= number - 1; i++)
+            var primes = new List<long>();
+            for ( var num = startNumber; num <= finalNumber; num++)
             {
-                if (number % i == 0)
-                    return false;
+                var ctr = 0;
+
+                for (var i = 2; i <= num / 2; i++)
+                {
+                    if (num % i == 0)
+                    {
+                        ctr++;
+                        break;
+                    }
+                }
+
+                if (ctr == 0 && num != 1)
+                    primes.Add(num);
             }
-            return i == number;
+            return primes;
         }
     }
 }
