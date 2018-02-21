@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlphabetSymmetry.cs" />
     <Compile Include="DuplicateEncode.cs" />
     <Compile Include="GapInPrimes.cs" />
     <Compile Include="HighestScoringWord.cs" />
