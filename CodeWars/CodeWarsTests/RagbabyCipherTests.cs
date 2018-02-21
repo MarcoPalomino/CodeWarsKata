@@ -43,7 +43,7 @@ namespace CodeWarsTests
             var ragbabyCipher = new RagbabyCipher();
 
             //Assert.AreEqual("ihrbfj", ragbabyCipher.Encode("cipher", "cipher"));
-            //Assert.AreEqual("ihrbfj", ragbabyCipher.Encode("cipher", "cccciiiiippphheeeeerrrrr"));
+            Assert.AreEqual("ihrbfj", ragbabyCipher.Encode("cipher", "cccciiiiippphheeeeerrrrr"));
             //Assert.AreEqual("Urew pu bq rzfsbtj.", ragbabyCipher.Encode("This is an example.", "cipher"));
             //Assert.AreEqual("Urew.uRew.urEw.ureW...", ragbabyCipher.Encode("This.tHis.thIs.thiS...", "cipher"));
 
@@ -51,8 +51,8 @@ namespace CodeWarsTests
             //Assert.AreEqual("This is an example.", ragbabyCipher.Decode("Urew pu bq rzfsbtj.", "cipher"));
             //Assert.AreEqual("This.tHis.thIs.thiS...", ragbabyCipher.Decode("Urew.uRew.urEw.ureW...", "cipher"));
 
-            Assert.AreEqual("This is an example.", ragbabyCipher.Encode(ragbabyCipher.Decode("This is an example.", "cipher"), "cipher"));
-            Assert.AreEqual("This is an example.", ragbabyCipher.Decode(ragbabyCipher.Encode("This is an example.", "cipher"), "cipher"));
+            //Assert.AreEqual("This is an example.", ragbabyCipher.Encode(ragbabyCipher.Decode("This is an example.", "cipher"), "cipher"));
+            //Assert.AreEqual("This is an example.", ragbabyCipher.Decode(ragbabyCipher.Encode("This is an example.", "cipher"), "cipher"));
         }
     }
 }

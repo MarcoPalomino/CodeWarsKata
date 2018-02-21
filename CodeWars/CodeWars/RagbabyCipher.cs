@@ -36,7 +36,7 @@ namespace CodeWars
             var newText = string.Empty;
             var countSpaces = 1;
 
-            text.ToArray().ToList().ForEach(letter =>
+            text.ToList().ForEach(letter =>
             {
                 switch (letter)
                 {
@@ -51,10 +51,10 @@ namespace CodeWars
                             countSpaces = 1;
                             break;
                         }
-
-                        var newLetter = coder.IndexOf(letter.ToString().ToLower()) + countSpaces > coder.Length - 1 
-                                    ? coder[coder.IndexOf(letter.ToString().ToLower()) + countSpaces - coder.Length].ToString() //letter.ToString() 
-                                    : coder[coder.IndexOf(letter.ToString().ToLower()) + countSpaces].ToString();
+                        var indexSelected = coder.IndexOf(letter.ToString().ToLower());
+                        var newLetter = indexSelected + countSpaces > coder.Length - 1 
+                                    ? coder[indexSelected + countSpaces - coder.Length].ToString()
+                                    : coder[indexSelected + countSpaces].ToString();
 
                         newText += char.IsUpper(letter) ? newLetter.ToUpper() : newLetter;
                         countSpaces++;
@@ -71,7 +71,7 @@ namespace CodeWars
             var newText = string.Empty;
             var countSpaces = 1;
 
-            text.ToArray().ToList().ForEach(letter =>
+            text.ToList().ForEach(letter =>
             {
                 switch (letter)
                 {
@@ -86,10 +86,10 @@ namespace CodeWars
                             countSpaces = 1;
                             break;
                         }
-
-                        var newLetter = coder.IndexOf(letter.ToString().ToLower()) - countSpaces < 0
-                            ? coder[coder.Length - countSpaces + coder.IndexOf(letter.ToString().ToLower())].ToString()//letter.ToString()
-                            : coder[coder.IndexOf(letter.ToString().ToLower()) - countSpaces].ToString();
+                        var indexSelected = coder.IndexOf(letter.ToString().ToLower());
+                        var newLetter = indexSelected - countSpaces < 0
+                            ? coder[coder.Length - countSpaces + indexSelected].ToString()//letter.ToString()
+                            : coder[indexSelected - countSpaces].ToString();
 
 
                         newText += char.IsUpper(letter) ? newLetter.ToString().ToUpper() : newLetter.ToString();
@@ -110,7 +110,7 @@ namespace CodeWars
         {
             var alphabet = Enumerable.Range('a', 'z' - 'a' + 1).Select(i => (char)i).ToArray();
             var alphabetWithoutKey = new string(alphabet);
-            key.Distinct().ToArray().ToList().ForEach(letter => alphabetWithoutKey = alphabetWithoutKey.Replace(letter.ToString(), string.Empty));
+            key.Distinct().ToList().ForEach(letter => alphabetWithoutKey = alphabetWithoutKey.Replace(letter.ToString(), string.Empty));
             return new string(key.Distinct().ToArray()) + alphabetWithoutKey;
         }
     }
