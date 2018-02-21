@@ -14,7 +14,14 @@ namespace CodeWarsTests
         [TestMethod()]
         public void SolveSymmetryTest()
         {
-            Assert.Fail();
+            var words = new List<string> { "abode", "ABc", "xyzD" };
+            var initialNumber = 100;
+            var finalNumber = 110;
+
+            var alphabetSymmetry = new AlphabetSymmetry();
+            var result = alphabetSymmetry.SolveSymmetry(words);
+
+            Assert.IsTrue(new List<int> { 4, 3, 1 }.SequenceEqual(result), "Incorrect");
         }
     }
 }
