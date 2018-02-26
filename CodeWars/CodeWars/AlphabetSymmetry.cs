@@ -16,7 +16,7 @@ namespace CodeWars
             words.ForEach(word =>
             {
                 var countLetterInPositions = 0;
-                word.ToLower().ToArray().ToList().ForEach(letter =>
+                word.ToLower().ToList().ForEach(letter =>
                 {
                     var indexLetterInAlphabet = alphabet.IndexOf(letter);
                     var indexLetterInWord = word.ToLower().IndexOf(letter);
