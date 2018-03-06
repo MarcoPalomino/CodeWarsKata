@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="AlphabetSymmetryTests.cs" />
     <Compile Include="DuplicateEncodeTests.cs" />
+    <Compile Include="FoldingWayToTheMoonTests.cs" />
     <Compile Include="GapInPrimesTests.cs" />
     <Compile Include="HighestScoringWordTests.cs" />
     <Compile Include="IQTestEvennessTests.cs" />

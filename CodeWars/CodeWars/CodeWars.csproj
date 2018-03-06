@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AlphabetSymmetry.cs" />
     <Compile Include="DuplicateEncode.cs" />
+    <Compile Include="FoldingWayToTheMoon.cs" />
     <Compile Include="GapInPrimes.cs" />
     <Compile Include="HighestScoringWord.cs" />
     <Compile Include="IQTestEvenness.cs" />
