@@ -52,6 +52,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AlphabetSymmetryTests.cs" />
+    <Compile Include="AverageGradesTests.cs" />
     <Compile Include="DuplicateEncodeTests.cs" />
     <Compile Include="FoldingWayToTheMoonTests.cs" />
     <Compile Include="GapInPrimesTests.cs" />
