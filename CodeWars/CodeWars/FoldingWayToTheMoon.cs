@@ -23,12 +23,18 @@ namespace CodeWars
 
         public int? FoldTo(double distance)
         {
-            if (distance < 0) return null;
+            if (distance <= 0) return null;
 
             var currentThickness = 0.0001;
+            var numberOfFolds = Math.Log(distance / currentThickness) / Math.Log(2);
 
-            return (int?)Math.Ceiling(Math.Log(distance / currentThickness) / Math.Log(2));
+            if (numberOfFolds < 0) return 0;
+            if (numberOfFolds == 0) return null;
+
+            return (int?)Math.Ceiling(numberOfFolds);
 
         }
+
+        
     }
 }

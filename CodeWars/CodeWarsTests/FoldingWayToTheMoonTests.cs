@@ -17,5 +17,16 @@ namespace CodeWarsTests
             
             Assert.AreEqual(expected, results);
         }
+
+        [TestMethod()]
+        public void FoldToTestLowValues()
+        {
+            var distance = 1.40996291920065E-10;
+            var expected = 0;
+            var foldWayToMoon = new FoldingWayToTheMoon();
+            var results = foldWayToMoon.FoldTo(distance);
+
+            Assert.AreEqual(expected, results);
+        }
     }
 }
