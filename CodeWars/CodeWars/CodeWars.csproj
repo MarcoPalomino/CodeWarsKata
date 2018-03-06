@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AlphabetSymmetry.cs" />
     <Compile Include="AverageGrades.cs" />
+    <Compile Include="CreatePhoneNumber.cs" />
     <Compile Include="DuplicateEncode.cs" />
     <Compile Include="FoldingWayToTheMoon.cs" />
     <Compile Include="GapInPrimes.cs" />
