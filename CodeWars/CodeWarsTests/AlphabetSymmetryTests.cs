@@ -15,13 +15,37 @@ namespace CodeWarsTests
         public void SolveSymmetryTest()
         {
             var words = new List<string> { "abode", "ABc", "xyzD" };
-            var initialNumber = 100;
-            var finalNumber = 110;
 
             var alphabetSymmetry = new AlphabetSymmetry();
             var result = alphabetSymmetry.SolveSymmetry(words);
 
             Assert.IsTrue(new List<int> { 4, 3, 1 }.SequenceEqual(result), "Incorrect");
         }
+
+        [TestMethod()]
+        public void SolveSymmetryTestNotValuesFound()
+        {
+            var words = new List<string> { "abide", "ABc", "xyz" };
+
+            var alphabetSymmetry = new AlphabetSymmetry();
+            var result = alphabetSymmetry.SolveSymmetry(words);
+
+            Assert.IsTrue(new List<int> { 4, 3, 0 }.SequenceEqual(result), "Incorrect");
+        }
+
+        [TestMethod()]
+        public void SolveSymmetryTestMultipleValuesFound()
+        {
+            var words = new List<string> { "IAMDEFANDJKL", "thedefgh", "xyzDEFghijabc" };
+
+            var alphabetSymmetry = new AlphabetSymmetry();
+            var result = alphabetSymmetry.SolveSymmetry(words);
+
+            Assert.IsTrue(new List<int> { 6, 5, 7 }.SequenceEqual(result), "Incorrect");
+        }
+
+
+        
+        
     }
 }

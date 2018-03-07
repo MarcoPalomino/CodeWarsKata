@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CodeWars
 {
@@ -16,14 +14,12 @@ namespace CodeWars
             words.ForEach(word =>
             {
                 var countLetterInPositions = 0;
-                word.ToLower().ToList().ForEach(letter =>
-                {
-                    var indexLetterInAlphabet = alphabet.IndexOf(letter);
-                    var indexLetterInWord = word.ToLower().IndexOf(letter);
-                    if (indexLetterInAlphabet == indexLetterInWord) countLetterInPositions++;
-                });
+                for (int i = 0; i< word.ToLower().Length; i++) 
+                    if (alphabet[i] == word.ToLower()[i]) countLetterInPositions++;
+
                 lettersOnPositions.Add(countLetterInPositions);
             });
+            
             return lettersOnPositions;
         }
     }
