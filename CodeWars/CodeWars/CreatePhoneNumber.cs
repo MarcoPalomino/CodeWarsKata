@@ -25,7 +25,11 @@ namespace CodeWars
         {
             var format = "(xxx) xxx-xxxx";
 
-            numbers.ToList().ForEach(item => format = format.Replace('x', item.ToString().ToCharArray().FirstOrDefault()));
+            numbers.ToList().ForEach(item =>
+            {
+                var numberFormat = item.ToString().ToCharArray();
+                format = format.Replace('x', numberFormat.FirstOrDefault());
+            });
 
             return format;
         }
