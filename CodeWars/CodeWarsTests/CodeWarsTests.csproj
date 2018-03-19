@@ -57,6 +57,7 @@
     <Compile Include="DuplicateEncodeTests.cs" />
     <Compile Include="FoldingWayToTheMoonTests.cs" />
     <Compile Include="GapInPrimesTests.cs" />
+    <Compile Include="GetFridayThirteenTests.cs" />
     <Compile Include="HighestScoringWordTests.cs" />
     <Compile Include="IQTestEvennessTests.cs" />
     <Compile Include="JadenCaseTests.cs" />

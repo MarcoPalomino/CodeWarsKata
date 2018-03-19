@@ -13,13 +13,13 @@ namespace CodeWars
         
         The returned format must be correct in order to complete this challenge. 
         Don't forget the space after the closing parentheses!
-         
+       
         */
 
         public string BuildPhoneNumber(int[] numbers)
         {
-            var formatNumber = "(" + numbers[0] + numbers[1] + numbers[2] + ")" + 
-                                " " + numbers[3] + numbers[4] + numbers[5] + 
+            var formatNumber = "(" + numbers[0] + numbers[1] + numbers[2] + ")" +
+                                " " + numbers[3] + numbers[4] + numbers[5] +
                                 "-" + numbers[6] + numbers[7] + numbers[8] + numbers[9];
 
             return formatNumber;
