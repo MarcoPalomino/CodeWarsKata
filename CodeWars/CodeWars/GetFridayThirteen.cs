@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CodeWars
 {
@@ -41,13 +39,15 @@ namespace CodeWars
 
             for (var day = startDate.Date; day.Date <= endDate.Date; day = day.AddDays(1))
             {
-                if(  day.DayOfWeek == DayOfWeek.Friday && day.Day == 13)
-                    fridaysBetween.Add(day);
+                if(day.DayOfWeek == DayOfWeek.Friday && day.Day == 13)
+                    fridaysBetween.Add(day.Date);
             }
 
-            var finalFridays = string.Join(" ", fridaysBetween.ToArray());
+            var finalFridays = string.Empty;
+            fridaysBetween.ForEach(item =>finalFridays = finalFridays + item.Month.ToString() + "/" + item.Day.ToString() + "/" + item.Year.ToString() + " ");
+
             
-            return finalFridays;
+            return finalFridays.TrimEnd();
         }
     }
 }
