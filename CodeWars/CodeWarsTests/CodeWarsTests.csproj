@@ -54,6 +54,7 @@
     <Compile Include="AlphabetSymmetryTests.cs" />
     <Compile Include="AverageGradesTests.cs" />
     <Compile Include="CreatePhoneNumberTests.cs" />
+    <Compile Include="CreditCardValidationTests.cs" />
     <Compile Include="DuplicateEncodeTests.cs" />
     <Compile Include="FoldingWayToTheMoonTests.cs" />
     <Compile Include="GapInPrimesTests.cs" />
