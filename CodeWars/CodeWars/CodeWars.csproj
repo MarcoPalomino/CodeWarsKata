@@ -54,6 +54,7 @@
     <Compile Include="HighestScoringWord.cs" />
     <Compile Include="IQTestEvenness.cs" />
     <Compile Include="JadenCase.cs" />
+    <Compile Include="PaginationHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RagbabyCipher.cs" />
