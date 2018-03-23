@@ -12,9 +12,14 @@ namespace CodeWarsTests
     public class FindUniqueStringTests
     {
         [TestMethod()]
-        public void FindUniqueTest()
+        public void FindUniqueStringTest()
         {
-            Assert.Fail();
+            var collectionTest = new[] { "Aa", "aaa", "aaaaa", "BbBb", "Aaaa", "AaAaAa", "a" };
+            var findUniqueString = new FindUniqueString();
+
+            var result = findUniqueString.FindUnique(collectionTest);
+
+            Assert.AreEqual("BbBb", result, "Incorrect");
         }
     }
 }

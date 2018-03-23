@@ -22,7 +22,11 @@ namespace CodeWars
 
         public string FindUnique(string[] words)
         {
-            return string.Empty;
+            var grouped = words.Select(item => item.ToLower()).GroupBy(item => item);
+            var letter = grouped.Select(i => i.Key.ToArray()[0]);
+            var differentLetter = letter.GroupBy(item => item).FirstOrDefault(i => i.Count() == 1).Key;
+
+            return words.ToList().FirstOrDefault(item=>item.ToLower().Contains(differentLetter.ToString()));
         }
 
     }
