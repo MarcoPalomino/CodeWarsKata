@@ -56,6 +56,7 @@
     <Compile Include="CreatePhoneNumberTests.cs" />
     <Compile Include="CreditCardValidationTests.cs" />
     <Compile Include="DuplicateEncodeTests.cs" />
+    <Compile Include="FindUniqueNumberTests.cs" />
     <Compile Include="FoldingWayToTheMoonTests.cs" />
     <Compile Include="GapInPrimesTests.cs" />
     <Compile Include="GetFridayThirteenTests.cs" />

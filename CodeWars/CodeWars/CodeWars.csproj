@@ -48,6 +48,7 @@
     <Compile Include="CreatePhoneNumber.cs" />
     <Compile Include="CreditCardValidation.cs" />
     <Compile Include="DuplicateEncode.cs" />
+    <Compile Include="FindUniqueNumber.cs" />
     <Compile Include="FoldingWayToTheMoon.cs" />
     <Compile Include="GapInPrimes.cs" />
     <Compile Include="GetFridayThirteen.cs" />
