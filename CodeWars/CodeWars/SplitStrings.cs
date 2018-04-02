@@ -8,9 +8,30 @@ namespace CodeWars
 {
     public class SplitStrings
     {
-        public string[] Solution(string word)
+        public string[] DoSplit(string word)
         {
-            return null;
+            var isOdd = word.Length % 2 == 1;
+            var splitStrings = new List<string>();
+
+            if (isOdd)
+            {
+                var lastLetter = word[word.Length - 1];
+                word = word.Remove(word.Length - 1, 1);
+                for (int i = 0; i < word.Length - 1; i += 2)
+                {
+                    splitStrings.Add(word[i].ToString() + word[i + 1].ToString());
+                }
+
+                splitStrings.Add(lastLetter.ToString() + "_");
+            }
+            else
+            {
+                for (int i = 0; i <= word.Length - 2; i += 2)
+                {
+                    splitStrings.Add(word[i].ToString() + word[i + 1].ToString());
+                }
+            }
+            return splitStrings.ToArray();
         }
     }
 }
