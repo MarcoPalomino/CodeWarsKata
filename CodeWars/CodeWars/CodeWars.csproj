@@ -61,6 +61,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RagbabyCipher.cs" />
     <Compile Include="ReversedStrings.cs" />
+    <Compile Include="SplitStrings.cs" />
     <Compile Include="SubstractSum.cs" />
     <Compile Include="SumDigits.cs" />
     <Compile Include="SumMultiplesNumber.cs" />
